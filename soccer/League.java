@@ -21,13 +21,6 @@ public class League {
 
         team1.teamName = "The Greens";
         team1.playerArray = thePlayers;
-
-        // player1.playerName = "Robert Service";
-        
-
-        // for(Player thePlayer: team1.playerArray){
-        //     System.out.println(thePlayer.playerName);
-        // }
         
         Team team2 = new Team();
         team2.teamName = "The Reds";
@@ -42,11 +35,6 @@ public class League {
 
         team2.playerArray[2] = new Player();
         team2.playerArray[2].playerName = "Rafael Sabatini";
-
-
-        // for(Player thePlayer: team2.playerArray){
-        //     System.out.println(thePlayer.playerName);
-        // }
 
         Game currGame = new Game();
         currGame.homeTeam = team1;
