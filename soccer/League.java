@@ -1,10 +1,11 @@
 package soccer;
 import soccer.Player;
 import soccer.Team;
+import static java.lang.System.out;
 
 public class League {
 
-    public static void main(String[] args) {
+    static public void main(String lunga_tshila[]) {
 
         Player player1 = new Player();
         player1.playerName = "Goerge Eliot";
@@ -19,7 +20,7 @@ public class League {
 
         Team team1 = new Team();
 
-        team1.teamName = "The Greens";
+        team1.teamName = "The Greens"; 
         team1.playerArray = thePlayers;
         
         Team team2 = new Team();
@@ -42,17 +43,65 @@ public class League {
 
         Goal goal1 = new Goal();
         goal1.thePlayer = currGame.homeTeam.playerArray[2];
-        goal1.theTeam    = currGame.homeTeam;
+        goal1.theTeam  = currGame.homeTeam;
         goal1.theTime = 55;
 
         Goal[] theGoals = {goal1};
 
         currGame.goals = theGoals;
-        System.out.println("Goal scored after " +
+
+        out.println("Goal scored after " +
         currGame.goals[0].theTime + " mins by " +
         currGame.goals[0].thePlayer.playerName + " of " +
         currGame.goals[0].theTeam.teamName);
+
+        System.out.println("---------------------------------");
+    //     for(Player thePlayer : team2.playerArray){
+
+    //         if(thePlayer.playerName.matches(".*Sab.*")){
+    //             out.println();
+    //             out.println("Found " + thePlayer.playerName);
+    //             out.println("Lastname is " + thePlayer.playerName.split(" ")[1]);
+    //             System.out.println();
+    //         }
+    //     }
+
+
+    //     StringBuilder familyNameFirst = new StringBuilder();
+
+    //     for(Player thePlayer : team1.playerArray){
+    //         String name[] = thePlayer.playerName.split(" ");
+
+    //         familyNameFirst.append(name[1]);
+    //         familyNameFirst.append(", ");
+    //         familyNameFirst.append(name[0]);
+    //         System.out.println(familyNameFirst);
+    //         familyNameFirst.delete(0, familyNameFirst.length());
+    //     }
+    // }
+
+    // public static Team[] createTeam(){
+    //     Team team1 = new Team();
+    //     Team team2 =  new Team();
+        
+    //     Team[] theTeams = {team1, team2};
+    //     return theTeams;
+    // }
+
+    // public static Game[] createGames(Team[] theTeams){
+    //     Game theGame = new Game();
+    //     theGame.homeTeam = theTeams[0];
+    //     theGame.awayTeam = theTeams[1];
+    //     Game[] theGames = {theGame};
+    //     return theGames;
+     
+    // }
+
     }
+
+
 }
+
+
 
         

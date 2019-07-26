@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - League",
+            "request": "launch",
+            "mainClass": "soccer.League"
+        }
+    ]
+}
