@@ -55,49 +55,49 @@ public class League {
         currGame.goals[0].thePlayer.playerName + " of " +
         currGame.goals[0].theTeam.teamName);
 
-        System.out.println("---------------------------------");
-    //     for(Player thePlayer : team2.playerArray){
-
-    //         if(thePlayer.playerName.matches(".*Sab.*")){
-    //             out.println();
-    //             out.println("Found " + thePlayer.playerName);
-    //             out.println("Lastname is " + thePlayer.playerName.split(" ")[1]);
-    //             System.out.println();
-    //         }
-    //     }
-
-
-    //     StringBuilder familyNameFirst = new StringBuilder();
-
-    //     for(Player thePlayer : team1.playerArray){
-    //         String name[] = thePlayer.playerName.split(" ");
-
-    //         familyNameFirst.append(name[1]);
-    //         familyNameFirst.append(", ");
-    //         familyNameFirst.append(name[0]);
-    //         System.out.println(familyNameFirst);
-    //         familyNameFirst.delete(0, familyNameFirst.length());
-    //     }
-    // }
-
-    // public static Team[] createTeam(){
-    //     Team team1 = new Team();
-    //     Team team2 =  new Team();
         
-    //     Team[] theTeams = {team1, team2};
-    //     return theTeams;
-    // }
+        for(Player thePlayer : team2.playerArray){
 
-    // public static Game[] createGames(Team[] theTeams){
-    //     Game theGame = new Game();
-    //     theGame.homeTeam = theTeams[0];
-    //     theGame.awayTeam = theTeams[1];
-    //     Game[] theGames = {theGame};
-    //     return theGames;
-     
-    // }
+            if(thePlayer.playerName.matches(".*Sab.*")){
+                out.println();
+                out.println("Found " + thePlayer.playerName);
+                out.println("Lastname is " + thePlayer.playerName.split(" ")[1]);
+                System.out.println();
+            }
+        }
 
+
+        StringBuilder familyNameFirst = new StringBuilder();
+
+        for(Player thePlayer : team1.playerArray){
+            String name[] = thePlayer.playerName.split(" ");
+
+            familyNameFirst.append(name[1]);
+            familyNameFirst.append(", ");
+            familyNameFirst.append(name[0]);
+            System.out.println(familyNameFirst);
+            familyNameFirst.delete(0, familyNameFirst.length());
+        }
     }
+
+    public static Team[] createTeam(){
+        Team team1 = new Team();
+        Team team2 =  new Team();
+        
+        Team[] theTeams = {team1, team2};
+        return theTeams;
+    }
+
+    public static Game[] createGames(Team[] theTeams){
+        Game theGame = new Game();
+        theGame.homeTeam = theTeams[0];
+        theGame.awayTeam = theTeams[1];
+        Game[] theGames = {theGame};
+        return theGames;
+     
+    }
+
+
 
 
 }
