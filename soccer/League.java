@@ -5,7 +5,12 @@ import static java.lang.System.out;
 
 public class League {
 
+
     static public void main(String lunga_tshila[]) {
+
+        Team[] theTeams = createTeam();
+        Game[] theGames = createGames(theTeams);
+        Game currGame = theGames[0];
 
         Player player1 = new Player();
         player1.playerName = "Goerge Eliot";
@@ -37,9 +42,9 @@ public class League {
         team2.playerArray[2] = new Player();
         team2.playerArray[2].playerName = "Rafael Sabatini";
 
-        Game currGame = new Game();
-        currGame.homeTeam = team1;
-        currGame.awayTeam = team2;
+        // Game currGame = new Game();
+        // currGame.homeTeam = team1;
+        // currGame.awayTeam = team2;
 
         Goal goal1 = new Goal();
         goal1.thePlayer = currGame.homeTeam.playerArray[2];
@@ -48,7 +53,9 @@ public class League {
 
         Goal[] theGoals = {goal1};
 
-        currGame.goals = theGoals;
+        currGame.goals = theGoals; 
+        int numberOfGoals = (int)(Math.random() * 7); 
+        out.println(numberOfGoals); 
 
         out.println("Goal scored after " +
         currGame.goals[0].theTime + " mins by " +
@@ -96,10 +103,6 @@ public class League {
         return theGames;
      
     }
-
-
-
-
 }
 
 
